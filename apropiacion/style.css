@@ -1,0 +1,16 @@
+/* 768px, 992px, 1200px */
+@media screen and (max-width: 1400px) {
+    .cambio_color {
+        background-color: #3800a0;
+    }
+}
+@media screen and (max-width: 992px) {
+    .cambio_color {
+        background-color: #ff1e1e;
+    }
+}
+@media screen and (max-width: 768px) {
+    .cambio_color {
+        background-color: #48e;
+    }
+}
