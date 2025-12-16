@@ -59,6 +59,7 @@ h3 {
 }
 
 /* SECCIÓN HERO (CABECERA) */
+
 .hero {
     background: url("hero-ram-desktop.jpg") no-repeat center center/cover; /* Reemplazar con imagen real */
     background-color: #000000;
@@ -70,6 +71,13 @@ h3 {
     padding: 50px 0;
 }
 
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
 .hero-title {
     font-size: 3.5rem;
     margin-bottom: 0.5rem;
@@ -79,6 +87,11 @@ h3 {
 .hero-subtitle {
     font-size: 1.5rem;
     margin-bottom: 2rem;
+}
+
+.container > img {
+    width: 150px;
+    margin: 40px;
 }
 
 .banner-speed {
