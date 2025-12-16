@@ -1,4 +1,8 @@
 /* 768px, 992px, 1200px */
+.cambio_color {
+    min-height: 50px;
+}
+
 @media screen and (max-width: 1400px) {
     .cambio_color {
         background-color: #3800a0;
@@ -12,5 +16,277 @@
 @media screen and (max-width: 768px) {
     .cambio_color {
         background-color: #48e;
+    }
+}
+/* <!-- punto 2  --> */
+.container {
+    min-height: 150px;
+    background-color: #444;
+}
+@media screen and (max-width: 1400px) {
+    .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+@media screen and (max-width: 992px) {
+    .container {
+        display: flex;
+        justify-content: left;
+        align-items: start;
+    }
+}
+@media screen and (max-width: 768px) {
+    .container {
+        display: flex;
+        justify-content: right;
+        align-items: end;
+    }
+}
+
+/* <!-- punto 3  --> */
+
+.nav_mobile > ul > li {
+    font-size: 1.3rem;
+}
+
+nav.nav_mobile h2 {
+    text-align: center;
+    background-color: red;
+}
+
+nav.nav_mobile p {
+    font-size: 1.9rem;
+}
+
+@media screen and (min-width: 500px) {
+    .nav_mobile > ul > li {
+        font-size: initial;
+    }
+
+    nav.nav_mobile h2 {
+        text-align: center;
+    }
+
+    nav.nav_mobile p {
+        font-size: initial;
+    }
+}
+
+/* <!-- punto 4  --> */
+
+.nav_desktop > ul {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+}
+.nav_desktop > ul > li {
+    margin: 12px;
+    font-size: 1.2rem;
+}
+
+nav.nav_desktop h2 {
+    text-align: center;
+}
+
+nav.nav_desktop p {
+    font-size: 1.3rem;
+}
+
+@media screen and (max-width: 1200px) {
+    .nav_desktop > ul {
+        display: flex;
+        align-items: center;
+        justify-content: end;
+    }
+    .nav_desktop > ul > li {
+        margin: 12px;
+        font-size: 1.2rem;
+    }
+
+    nav.nav_desktop h2 {
+        text-align: right;
+    }
+
+    nav.nav_desktop p {
+        font-size: 1.3rem;
+    }
+
+    nav.nav_desktop p::first-letter {
+        font-size: 3rem;
+        color: red;
+    }
+}
+
+/* <!-- punto 5  --> */
+
+@media screen and (max-width: 500px) {
+    nav.menu_adaptativo {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    nav.menu_adaptativo li {
+        margin: 20px;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    nav.menu_adaptativo {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    nav.menu_adaptativo ol {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+    }
+    nav.menu_adaptativo > ol li {
+        flex-grow: 1;
+        font-size: 2rem;
+    }
+}
+
+/* <!-- punto 7  --> */
+
+@media screen and (min-width: 768px) {
+    .cambio-fuente-adaptativo {
+        font-size: 1.2rem;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .cambio-fuente-adaptativo {
+        font-size: 1.5rem;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .cambio-fuente-adaptativo {
+        font-size: 1.7rem;
+    }
+}
+/* <!-- punto 7  --> */
+/* <!-- punto 8  --> */
+.contenedor-tarjetas {
+    margin: 20px auto;
+}
+
+.tarjeta-item {
+    background-color: #f4f4f4;
+    border: 1px solid #ccc;
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    width: 100%;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.tarjeta-item img {
+    max-width: 100%;
+    height: auto;
+    margin-top: 10px;
+}
+@media screen and (min-width: 768px) {
+    .contenedor-tarjetas {
+        display: flex;
+        gap: 20px;
+        justify-content: space-between;
+    }
+
+    /* 2. LOS ITEMS definen su ancho */
+    .tarjeta-item {
+        width: calc(33.33% - 15px);
+
+        margin-bottom: 0;
+    }
+}
+
+/* <!-- punto 9  --> */
+
+@media print {
+    body {
+        background-color: #fff !important;
+        color: #000;
+    }
+
+    * {
+        background: transparent !important;
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+
+    /* Muestra la URL completa de los enlaces impresos para referencia (Ej: [Mi Enlace] (www.web.com)) */
+    a[href]:after {
+        content: " (" attr(href) ")";
+        font-size: 90%;
+        color: #555;
+    }
+
+    /* No muestra la URL si es un enlace a JavaScript o un ancla interna */
+    a[href^="#"]:after,
+    a[href^="javascript:"]:after {
+        content: "";
+    }
+
+    /* Asegura que el contenedor principal ocupe todo el ancho de la página */
+    .contenedor-principal {
+        width: 100% !important;
+        float: none !important;
+        padding: 0 !important;
+        margin: 0 !important;
+    }
+
+    /* Si usas un diseño de columnas (como Flexbox o Grid), desactívalo para imprimir */
+    .fila-columnas {
+        display: block !important;
+    }
+
+    /* 5. FUENTES Y TAMAÑO */
+    /* Las fuentes en la impresión deben ser legibles, típicamente en 'pt' (puntos) */
+    body,
+    p {
+        font-size: 12pt;
+        line-height: 1.4;
+    }
+}
+
+/* <!-- punto 10  --> */
+
+.form_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #444;
+    color: #ddd;
+    width: 100%;
+    font-size: 1.3rem;
+}
+
+.form_container form {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+}
+
+@media screen and (max-width: 720px) {
+    .form_container {
+        min-height: 60dvh;
+    }
+
+    div.campo-grupo {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    div.campo-grupo button {
+        width: 200px;
+        height: 50px;
+        background-color: green;
+        margin: 6px;
     }
 }
