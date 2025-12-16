@@ -1,0 +1,193 @@
+/* RESET BÁSICO Y FUENTES */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+    color: #f1f1f1;
+    background-color: #1a1a1a; /* Fondo oscuro moderno */
+    line-height: 1.6;
+}
+
+h1,
+h2,
+h3 {
+    font-family: "Oswald", sans-serif;
+    color: #ffffff;
+    margin-bottom: 1rem;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+/* BOTONES GLOBALES */
+.btn {
+    display: inline-block;
+    padding: 12px 25px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: 700;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn-primary {
+    background-color: #ff4500; /* Naranja/Rojo Corsair */
+    color: #fff;
+    border: none;
+}
+
+.btn-primary:hover {
+    background-color: #cc3700;
+    transform: translateY(-2px);
+}
+
+.btn-secondary {
+    background-color: transparent;
+    color: #ff4500;
+    border: 2px solid #ff4500;
+}
+
+.btn-secondary:hover {
+    background-color: #ff4500;
+    color: #1a1a1a;
+}
+
+/* SECCIÓN HERO (CABECERA) */
+.hero {
+    background: url("hero-ram-desktop.jpg") no-repeat center center/cover; /* Reemplazar con imagen real */
+    background-color: #000000;
+    height: 60vh;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    padding: 50px 0;
+}
+
+.hero-title {
+    font-size: 3.5rem;
+    margin-bottom: 0.5rem;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+}
+
+.hero-subtitle {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.banner-speed {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    background-color: rgba(255, 69, 0, 0.8);
+    padding: 5px 15px;
+    border-radius: 3px;
+    font-weight: 700;
+    font-size: 1.1rem;
+}
+
+/* SECCIONES ESTÁNDARES */
+.section {
+    padding: 80px 0;
+    text-align: center;
+}
+
+.section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    text-transform: uppercase;
+    color: #ff4500;
+}
+
+/* SECCIÓN DE BENEFICIOS */
+.benefits {
+    background-color: #222222;
+}
+
+.benefits-grid {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.benefit-item {
+    flex: 1;
+    padding: 20px;
+    background-color: #333333;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.benefit-item .icon {
+    font-size: 3rem;
+    display: block;
+    margin-bottom: 10px;
+    color: #ff4500;
+}
+
+/* SECCIÓN DE ESPECIFICACIONES */
+.specs-table {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: left;
+    background-color: #333333;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.specs-table table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.specs-table th,
+.specs-table td {
+    padding: 15px;
+}
+
+.specs-table tr:nth-child(even) {
+    background-color: #2b2b2b;
+}
+
+/* ADAPTADO PARA MOVIL */
+@media screen and (max-width: 700px) {
+    header.hero {
+        width: 70dvw;
+        margin: auto;
+        height: fit-content;
+    }
+    header.hero h1 {
+        font-size: 2rem;
+    }
+
+    header.hero p {
+        font-size: 1rem;
+    }
+    header.hero div .banner-speed {
+        margin: auto;
+        width: fit-content;
+        margin-top: 40px;
+        position: static;
+    }
+    section.benefits {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    .benefits-grid {
+        display: block;
+    }
+    .benefits-grid > .benefit-item {
+        margin: 20px auto auto 20px;
+        width: fit-content;
+        min-width: 60dvw;
+    }
+}
