@@ -1,5 +1,5 @@
 link
-[text](https://jhon-gelvez.github.io/responsive/)
+[page](https://jhon-gelvez.github.io/responsive/)
 
 Use la media querie
 @media screen and (x-width: x) 
