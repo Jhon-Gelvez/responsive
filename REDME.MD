@@ -1,4 +1,7 @@
-USE la media querie
+link
+[text](https://jhon-gelvez.github.io/responsive/)
+
+Use la media querie
 @media screen and (x-width: x) 
 para que al detectar el ancho del dispositivo cambie entre estilos 
 adptando el contenido de mejor manera
