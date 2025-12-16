@@ -53,7 +53,6 @@
 
 nav.nav_mobile h2 {
     text-align: center;
-    background-color: red;
 }
 
 nav.nav_mobile p {
@@ -270,12 +269,19 @@ nav.nav_desktop p {
 .form_container form {
     display: flex;
     width: 100%;
-    flex-direction: column;
+    flex-direction: row;
 }
 
 @media screen and (max-width: 720px) {
     .form_container {
         min-height: 60dvh;
+        margin: auto;
+    }
+    .form_container form {
+        display: flex;
+        margin: auto;
+        width: 100%;
+        flex-direction: column;
     }
 
     div.campo-grupo {
@@ -289,4 +295,28 @@ nav.nav_desktop p {
         background-color: green;
         margin: 6px;
     }
+}
+
+/* <!-- punto 11  --> */
+@media screen and (max-width: 1200px) {
+    .container_rem_em {
+        font-size: 1.7em;
+    }
+    .container_rem_em p {
+        font-size: 1.9rem;
+    }
+}
+@media screen and (max-width: 720px) {
+    .container_rem_em h2 {
+        font-size: 1.3em;
+    }
+
+    .container_rem_em p {
+        font-size: 1.5rem;
+    }
+}
+
+    /* <!-- punto 12  --> */
+div.imagen picture img {
+    width: 200px;
 }
