@@ -176,11 +176,13 @@ h3 {
 
 /* ADAPTADO PARA MOVIL */
 @media screen and (max-width: 700px) {
+    /* ajusto el tamano del contenido */
     header.hero {
         width: 70dvw;
         margin: auto;
         height: fit-content;
     }
+    /* cambio en el tamano de la letra */
     header.hero h1 {
         font-size: 2rem;
     }
@@ -188,20 +190,23 @@ h3 {
     header.hero p {
         font-size: 1rem;
     }
+    /* cambio la pocison del boton */
     header.hero div .banner-speed {
         margin: auto;
         width: fit-content;
         margin-top: 40px;
         position: static;
     }
+    /* alineacion del contenido */
     section.benefits {
         display: flex;
         justify-content: center;
         align-items: center;
         flex-direction: column;
     }
+    /* cambio de la direccion del contenido a columna */
     .benefits-grid {
-        display: block;
+        flex-direction: column;
     }
     .benefits-grid > .benefit-item {
         margin: 20px auto auto 20px;
