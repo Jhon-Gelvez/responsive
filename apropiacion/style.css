@@ -46,6 +46,9 @@
 }
 
 /* <!-- punto 3  --> */
+.container-mobile_first {
+    background-color: #c7c7c7;
+}
 
 .nav_mobile > ul > li {
     font-size: 1.3rem;
@@ -74,6 +77,10 @@ nav.nav_mobile p {
 }
 
 /* <!-- punto 4  --> */
+.container-desktop_first {
+    background-color: #8b8b8b;
+
+}
 
 .nav_desktop > ul {
     display: flex;
@@ -106,7 +113,7 @@ nav.nav_desktop p {
     }
 
     nav.nav_desktop h2 {
-        text-align: right;
+        text-align: start;
     }
 
     nav.nav_desktop p {
@@ -150,7 +157,7 @@ nav.nav_desktop p {
     }
 }
 
-/* <!-- punto 7  --> */
+/* <!-- punto 6  --> */
 
 @media screen and (min-width: 768px) {
     .cambio-fuente-adaptativo {
@@ -170,6 +177,15 @@ nav.nav_desktop p {
     }
 }
 /* <!-- punto 7  --> */
+
+.link-galeria {
+    display: block;
+    text-align: center;
+    color: #ff1414;
+    font-weight: bold;
+    font-size: 2rem;
+}
+
 /* <!-- punto 8  --> */
 .contenedor-tarjetas {
     margin: 20px auto;
@@ -317,7 +333,7 @@ nav.nav_desktop p {
     }
 }
 
-    /* <!-- punto 12  --> */
+/* <!-- punto 12  --> */
 div.imagen picture img {
     width: 200px;
 }
