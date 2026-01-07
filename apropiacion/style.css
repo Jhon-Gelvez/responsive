@@ -77,8 +77,9 @@ nav.nav_mobile p {
 
 .nav_desktop > ul {
     display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: end;
+    justify-content: center;
 }
 .nav_desktop > ul > li {
     margin: 12px;
