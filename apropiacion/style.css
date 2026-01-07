@@ -52,6 +52,10 @@
     background-color: #c7c7c7;
 }
 
+.nav_mobile {
+    padding: 12px;
+}
+
 .nav_mobile > ul > li {
     font-size: 1.3rem;
 }
@@ -61,12 +65,20 @@ nav.nav_mobile h2 {
 }
 
 nav.nav_mobile p {
-    font-size: 1.9rem;
+    font-size: 1.3rem;
 }
 
 @media screen and (min-width: 500px) {
+    .nav_mobile > ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
     .nav_mobile > ul > li {
         font-size: initial;
+        margin: auto;
     }
 
     nav.nav_mobile h2 {
@@ -81,6 +93,10 @@ nav.nav_mobile p {
 /* <!-- punto 4  --> */
 .container-desktop_first {
     background-color: #8b8b8b;
+}
+
+.nav_desktop {
+    padding: 12px;
 }
 
 .nav_desktop > ul {
@@ -102,15 +118,21 @@ nav.nav_desktop p {
     font-size: 1.3rem;
 }
 
+nav.nav_desktop p::first-letter {
+    font-size: 3rem;
+    color: red;
+}
+
 @media screen and (max-width: 1200px) {
     .nav_desktop > ul {
         display: flex;
-        align-items: center;
-        justify-content: end;
+        flex-direction: column;
+        align-items: start;
+        justify-content: center;
     }
     .nav_desktop > ul > li {
         margin: 12px;
-        font-size: 1.2rem;
+        font-size: 1rem;
     }
 
     nav.nav_desktop h2 {
@@ -118,43 +140,33 @@ nav.nav_desktop p {
     }
 
     nav.nav_desktop p {
-        font-size: 1.3rem;
-    }
-
-    nav.nav_desktop p::first-letter {
-        font-size: 3rem;
-        color: red;
+        font-size: 1rem;
     }
 }
 
 /* <!-- punto 5  --> */
 
-@media screen and (max-width: 500px) {
-    nav.menu_adaptativo {
-        display: flex;
+nav.menu_adaptativo ol {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+nav.menu_adaptativo ol {
+    width: 100%;
+    display: flex;
+    padding: 0;
+}
+
+@media screen and (min-width: 900px) {
+    nav.menu_adaptativo ol {
+        flex-direction: row;
         justify-content: center;
-        align-items: center;
     }
 
     nav.menu_adaptativo li {
         margin: 20px;
-    }
-}
-
-@media screen and (min-width: 1200px) {
-    nav.menu_adaptativo {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-    nav.menu_adaptativo ol {
-        width: 100%;
-        display: flex;
-        justify-content: space-between;
-    }
-    nav.menu_adaptativo > ol li {
-        flex-grow: 1;
-        font-size: 2rem;
+        font-size: 1.3rem;
     }
 }
 
@@ -229,6 +241,8 @@ nav.nav_desktop p {
     body {
         background-color: #fff !important;
         color: #000;
+        font-family: "Times New Roman", Times, serif;
+        font-size: 11px;
     }
 
     * {
@@ -325,8 +339,13 @@ div.campo-grupo button {
 }
 
 /* <!-- punto 11  --> */
+
+.container_rem_em {
+    font-size: 51px;
+}
+
 @media screen and (max-width: 1200px) {
-    .container_rem_em {
+    .container_rem_em h2 {
         font-size: 1.7em;
     }
     .container_rem_em p {
@@ -335,7 +354,7 @@ div.campo-grupo button {
 }
 @media screen and (max-width: 720px) {
     .container_rem_em h2 {
-        font-size: 1.3em;
+        font-size: 0.3em;
     }
 
     .container_rem_em p {
@@ -349,6 +368,16 @@ div.imagen {
     justify-content: center;
     align-items: center;
 }
-div.imagen picture img {
+div.imagen div {
     width: 200px;
+    height: 200px;
+    background-image: url("../assets/winter-arc.jpg");
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+@media screen and (max-width: 720px) {
+    div.imagen div {
+        background-image: url("../assets/winter2.jpg");
+    }
 }
