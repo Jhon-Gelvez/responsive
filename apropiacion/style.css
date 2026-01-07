@@ -79,7 +79,6 @@ nav.nav_mobile p {
 /* <!-- punto 4  --> */
 .container-desktop_first {
     background-color: #8b8b8b;
-
 }
 
 .nav_desktop > ul {
@@ -343,6 +342,11 @@ div.campo-grupo button {
 }
 
 /* <!-- punto 12  --> */
+div.imagen {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 div.imagen picture img {
     width: 200px;
 }
