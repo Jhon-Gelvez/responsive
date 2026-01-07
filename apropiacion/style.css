@@ -6,6 +6,7 @@
 @media screen and (max-width: 1400px) {
     .cambio_color {
         background-color: #3800a0;
+        color: #fff;
     }
 }
 @media screen and (max-width: 992px) {
@@ -22,6 +23,7 @@
 .container {
     min-height: 150px;
     background-color: #444;
+    color: #fff;
 }
 @media screen and (max-width: 1400px) {
     .container {
